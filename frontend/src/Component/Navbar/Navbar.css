@@ -1,0 +1,124 @@
+
+.topbar{
+    background-color: #101046;
+    width: 100%;
+    padding: 1rem 3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.contactdetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    cursor: pointer;
+}
+
+.contact:hover{
+    color: #0e9aee;
+}
+
+.right_containter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    font-size: 1rem;
+}
+
+.socialicon{
+    border: 1px solid gray;
+    border-radius: 100%;
+    padding: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+
+.socialicon:hover{
+    background-color: #4934d3;
+}
+
+
+.registerbtn{
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    color: white;
+    background-color: #4934d3;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+
+}
+
+.registerbtn:hover{
+    background-color: #101046;
+
+}
+.login{
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.login:hover{
+    color: #0e9aee;
+}
+
+
+.bottombar{
+    background-color: #000036;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 5rem;
+}
+
+.logo{
+    font-size: 2rem;
+    color: white;
+}
+
+.menu{
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    transition: color .2s ease-in-out;
+}
+
+.menu a:hover{
+    color: #0e9aee;
+}

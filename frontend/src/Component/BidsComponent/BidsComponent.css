@@ -1,0 +1,39 @@
+.bids-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #000036;
+  }
+  
+  .bids-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .bid-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .bid-actions {
+    margin-top: 10px;
+  }
+  
+  .accept-btn {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .reject-btn {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  

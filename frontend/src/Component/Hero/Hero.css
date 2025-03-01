@@ -1,0 +1,58 @@
+.hero{
+    background-color: #101046;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+}
+
+.leftcontianer{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    color: white;
+}
+
+.leftcontianer h1{
+    font-size: 4rem;
+    line-height: 5rem;
+    text-align: left;
+}
+
+.leftcontianer p{
+    color: gray;
+    font-size: 1.2rem;
+}   
+
+.leftcontianer button{
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    color: white;
+    background-color: #4934d3;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+
+}
+
+.leftcontianer button:hover{
+    background-color: #101046;
+
+}
+
+
+.rigthcontianer{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rigthcontianer img{
+    width: 100%;
+    max-width: 50rem;
+    margin-bottom: 2rem;
+}

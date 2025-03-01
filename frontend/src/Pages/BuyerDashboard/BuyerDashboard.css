@@ -1,0 +1,140 @@
+.buyer-dashboard {
+    font-family: Arial, sans-serif;
+    background-color: #101046;
+    color:white;
+    min-height: 100vh;
+  }
+  .buyer-dashboard h1{
+      font-size: 3rem;
+  }
+  .dashboard-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .tender-form {
+    background: #000036;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 20px;
+  }
+  
+  .form-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #101046;
+    color: white;
+  }
+  
+  .form-textarea {
+    height: 80px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background: #422fc1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .submit-button:hover {
+    background: #3828a1;
+  }
+  
+  
+
+  .section-title{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .tender-list {
+    padding: 20px;
+    list-style: none;
+    text-decoration: none;
+    background-color: #000036;
+  }
+  
+  .tender-list ul{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+  }
+  
+  .tender-list ul li{
+    background-color: #101046;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  
+  .bids-section {
+    margin-top: 10px;
+  }
+  
+  .bids-title {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .bids-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .bid-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .select-button {
+    padding: 5px 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .select-button:hover {
+    background: #218838;
+  }
+  
+  .no-tenders,
+  .no-bids {
+    color: #888;
+  }
+  

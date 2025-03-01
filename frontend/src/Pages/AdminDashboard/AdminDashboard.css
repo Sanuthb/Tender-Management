@@ -1,0 +1,72 @@
+.admin-dashboard{
+    background: #101046;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tenders-section{
+    padding: 2rem;
+}
+
+.tenders-section h2{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.users-section h2{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.tenders-section ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tenders-section li{
+    background-color: #000036;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+}
+
+.users-section{
+    background-color: #000036;
+    width: 100%;
+    padding: 1rem;
+}
+
+.users-section .user-table{
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.user-table tr,td,th{
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .delete-btn:hover {
+    background-color: darkred;
+  }
+  
