@@ -43,7 +43,7 @@ const TenderDetail = () => {
         { message, amount: bidAmount },
         {
           headers: {
-            Authorization: `Bearer ${JSON.parse(token)}`, 
+            Authorization: `Bearer ${token}`, 
             "Content-Type": "application/json",
           },
         }

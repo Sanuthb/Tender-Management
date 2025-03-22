@@ -17,7 +17,7 @@ const BidsComponent = ({ tenderId }) => {
 
     try {
       const response = await axios.get(`http://localhost:5000/api/bids/${tenderId}`, {
-        headers: { Authorization: `Bearer ${(token)}` },
+        headers: { Authorization: `Bearer ${JSON.parse(token)}` },
       });
       setBids(response.data);
     } catch (error) {
@@ -32,7 +32,7 @@ const BidsComponent = ({ tenderId }) => {
         `http://localhost:5000/api/bids/${bidId}`,
         { status }, // Update bid status
         {
-          headers: { Authorization: `Bearer ${(token)}` },
+          headers: { Authorization: `Bearer ${JSON.parse(token)}` },
         }
       );
       fetchBids(); // Refresh bids after update
