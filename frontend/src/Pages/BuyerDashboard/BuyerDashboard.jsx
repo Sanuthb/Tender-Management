@@ -24,7 +24,7 @@ const BuyerDashboard = () => {
       const response = await axios.get(
         "http://localhost:5000/api/tenders/specifictender",
         {
-          headers: { Authorization: `Bearer ${JSON.parse(token)}` }, // Removed unnecessary JSON.parse()
+          headers: { Authorization: `Bearer ${token}` },
         }
       );
       setTenders(response.data);
@@ -41,7 +41,7 @@ const BuyerDashboard = () => {
     try {
       await axios.post("http://localhost:5000/api/tenders", formData, {
         headers: {
-          Authorization: `Bearer ${JSON.parse(token)}`,
+          Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
         },
       });
@@ -51,6 +51,18 @@ const BuyerDashboard = () => {
     } catch (error) {
       console.error("Error posting tender:", error.response?.data || error);
       setFormStatus("error");
+    }
+  };
+
+  // Close a tender
+  const closeTender = async (id) => {
+    try {
+      await axios.patch(`http://localhost:5000/api/tenders/close/${id}`, {}, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      fetchTenders(); // Refresh tenders after closing one
+    } catch (error) {
+      console.error("Error closing tender:", error.response?.data || error);
     }
   };
 
@@ -91,22 +103,34 @@ const BuyerDashboard = () => {
         <div className="tender-list">
           <h2 className="section-title">My Tenders</h2>
           <div className="mytenders">
-          {tenders.length === 0 ? (
-            <p>No tenders posted yet.</p>
-          ) : (
-            <ul>
-              {tenders.map((tender) => (
-                <li key={tender.id} className="tender-item">
-                  <h3>{tender.title}</h3>
-                  <p>{tender.description}</p>
-                  <span>Status: {tender.status}</span>
+            {tenders.length === 0 ? (
+              <p>No tenders posted yet.</p>
+            ) : (
+              <ul>
+                {tenders.map((tender) => (
+                  <li key={tender.id} className="tender-item">
+                    <h3>{tender.title}</h3>
+                    <p>{tender.description}</p>
+                    <span>Status: {tender.status}</span>
 
-                  {/* Pass tenderId to BidsComponent */}
-                  <BidsComponent tenderId={tender.id} />
-                </li>
-              ))}
-            </ul>
-          )}
+                    {/* Close Tender Button */}
+                    {tender.status === "open" ? (
+                      <button
+                        className="close-button"
+                        onClick={() => closeTender(tender.id)}
+                      >
+                        Close Tender
+                      </button>
+                    ) : (
+                      <span className="closed-label">Closed</span>
+                    )}
+
+                    {/* Pass tenderId to BidsComponent */}
+                    <BidsComponent tenderId={tender.id} />
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </div>

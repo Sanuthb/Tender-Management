@@ -14,7 +14,7 @@ const AdminDashboard = () => {
   const fetchTenders = async () => {
     try {
       const response = await axios.get("http://localhost:5000/api/tenders/", {
-        headers: { Authorization: `Bearer ${JSON.parse(token)}` },
+        headers: { Authorization: `Bearer ${(token)}` },
       });
       setTenders(response.data);
     } catch (error) {
@@ -26,7 +26,7 @@ const AdminDashboard = () => {
   const fetchUsers = async () => {
     try {
       const response = await axios.get("http://localhost:5000/api/users/", {
-        headers: { Authorization: `Bearer ${JSON.parse(token)}` },
+        headers: { Authorization: `Bearer ${(token)}` },
       });
       setUsers(response.data);
     } catch (error) {
@@ -41,7 +41,7 @@ const AdminDashboard = () => {
 
     try {
       await axios.delete(`http://localhost:5000/api/users/${userId}`, {
-        headers: { Authorization: `Bearer ${JSON.parse(token)}` },
+        headers: { Authorization: `Bearer ${(token)}` },
       });
 
       // Update UI after deletion

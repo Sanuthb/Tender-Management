@@ -7,7 +7,9 @@ const router = express.Router();
 
 router.get('/',async (req,res)=>{
   try{
-    const tenders = await prisma.tender.findMany();
+    const tenders = await prisma.tender.findMany({
+      where: { status: "open" },
+    });
     res.json(tenders);
   }
   catch (error) {
@@ -134,6 +136,22 @@ router.post("/:tenderId/bid",authMiddleware,async (req, res) => {
     res.status(500).json({ error: "Failed to place bid" });
   }
 });
+
+router.patch('/close/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const updatedTender = await prisma.tender.update({
+      where: { id: id},
+      data: { status: "closed" }
+    });
+
+    res.json({ message: "Tender closed successfully", tender: updatedTender });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to close tender" });
+  }
+});
+
 
 
 module.exports = router;

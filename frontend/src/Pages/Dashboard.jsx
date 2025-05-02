@@ -26,7 +26,7 @@ const Dashboard = () => {
       const response = await axios.get("http://localhost:5000/api/tenders/assigned", {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${JSON.parse(token)}`,
+          Authorization: `Bearer ${(token)}`,
         },
       });
       setBidStatus(response.data); // Update state with fetched bid status
